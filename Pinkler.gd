@@ -4,14 +4,17 @@ extends Control
 # if it should outputed to the runtime output as well
 # this is usefull if you want to log the stuff the pinkler pisses
 @export var _pinkler_to_output: bool = true
+# set this to true when using the Panku console
+@export var _using_panku_console: bool #= true
 
-var _pinkler_version: String = "v.1.0.stable"
+var _pinkler_version: String = "v.1.0.1.stable"
 var is_visible: bool = true
 var default_color: Color = Color(0.8555, 0.2742, 0.3575, 1)
 
 
 func _ready() -> void:
-	Console.register_env("Pinkler", self)
+	if _using_panku_console:
+		Console.register_env("Pinkler", self)
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	_init_pinkler()
 
