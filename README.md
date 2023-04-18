@@ -11,8 +11,10 @@ A script for displaying debug messages in Godot.
 
 4. Now you can do `Pinkler.piss(line_color, arguments)`
 This will print something to the `RichTextLabel`
+
 `line_color` can be used to color the line by passing a `Color`. This argument is optional, if no color is provided the `default_color` will be used
 `arguments` can be anything except `""`, because this is already used to filter out unused arguments.
 
 5. There is also `Pinkler.new_line()`
+
 This will print an emtpy line
