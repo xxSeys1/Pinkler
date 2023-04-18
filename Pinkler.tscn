@@ -1,0 +1,94 @@
+[gd_scene load_steps=7 format=3 uid="uid://dgnbk57mfe5fg"]
+
+[ext_resource type="Script" path="res://Pinkler/Pinkler.gd" id="1_nioc6"]
+[ext_resource type="FontFile" uid="uid://cghqo0jvympor" path="res://Fonts/Chivo_Mono_Thin/ChivoMono-VariableFont_wght.ttf" id="2_3k5k4"]
+[ext_resource type="FontFile" uid="uid://ck26ugolwlam0" path="res://Fonts/Chivo_Mono/ChivoMono-VariableFont_wght.ttf" id="3_1j1h6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ahcb"]
+bg_color = Color(0.6, 0.6, 0.6, 0.152941)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xxiq3"]
+bg_color = Color(0.396078, 0.396078, 0.396078, 0.219608)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_fvo2d"]
+font_size = 12
+font_color = Color(0.0235294, 0.0235294, 0.0235294, 1)
+
+[node name="Pinkler" type="Control"]
+top_level = true
+light_mask = 2
+visibility_layer = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1025.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_nioc6")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 401.0
+offset_right = -336.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3ahcb")
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 401.0
+offset_right = -336.0
+offset_bottom = -659.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xxiq3")
+
+[node name="Label" type="Label" parent="Panel2"]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 2.0
+offset_right = 557.0
+offset_bottom = 20.0
+theme_override_fonts/font = ExtResource("3_1j1h6")
+theme_override_font_sizes/font_size = 11
+text = "H to hide this (it's called the \"Pinkler\", btw (german for \"Pisser\"))"
+label_settings = SubResource("LabelSettings_fvo2d")
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+top_level = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 422.0
+offset_right = -1366.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(1, 0.482353, 0.427451, 1)
+theme_override_constants/line_separation = -1
+theme_override_fonts/normal_font = ExtResource("2_3k5k4")
+theme_override_font_sizes/normal_font_size = 12
+text = "
+"
+scroll_following = true
+autowrap_mode = 0
+threaded = true
+progress_bar_delay = -1
