@@ -1,5 +1,5 @@
 # Pinkler
-A script for displaying debug messaged in Godot. 
+A script for displaying debug messages in Godot. 
 
 **USAGE**
 
