@@ -16,6 +16,6 @@ This will print whatever you pass as arguments
 
 **line_color:** A `Color` to color the text you want to output. This argument is optional, if no color is provided the *default_color* will be used.
 
-**is_inline:** A `bool` defining if the output should be inlined. This argument is optional. **IMPORTANT** when using a *bool* as the second argument, you need to convert it to a *String* first by doing `str(bool)`. Else the text will be inlined and the bool will be not outputted.
+**is_inline:** A `bool` defining if the output should be inlined. This argument is optional. **!! IMPORTANT !!** when using a *bool* as the second argument, you need to convert it to a *String* first by doing `str(bool)`. Else the text will be inlined and the bool will be not outputted.
 
-**arguments:** The text you want to output. Can be anything except *""* (an emtpy String), because this is already used to filter out unused arguments.
+**arguments:** The text you want to output. **!! IMPORTANT !!** Can be anything except *""* (an emtpy String), because this is already used to filter out unused arguments. You can work around this limitation by doing `str("")`.
