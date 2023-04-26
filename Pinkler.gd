@@ -1,5 +1,6 @@
 class_name Pinggla extends MarginContainer
 
+# the label used for outputting text
 @export var _label: RichTextLabel
 # this is usefull if you want to log the stuff the pinkler pisses
 @export var _stack_same: bool = true
@@ -10,19 +11,22 @@ class_name Pinggla extends MarginContainer
 # disables the Pinkler to save on memory in non dev builds
 @export var _release_mode: bool
 @export_group("Formating")
+# the default color used for piss() when now Color is provided
 @export var _default_color: Color = Color(1, 0.16, 0.286, 1)
+# the amount of spaces used for indentation
 @export_range(1, 25, 1, "hide_slider", "or_greater") var _indent_amount: int = 4
+# if the (Yx) should be bold or not
 @export var _stacked_is_bold: bool = true
 @export_group("Threading")
 # label threading is disabled by default because it leads to flickering
 # enable only if you notice Pinkler related performance problems
 @export var _label_is_threaded: bool = false
-#@export var _pinkler_is_threaded: bool = true
 @export_group("PankuConsole")
 # set this to true when using the Panku console
 @export var _use_panku_console: bool #= true
 @export_group("Debug")
 # this is (mostly) useless but makes it very ✨fancy✨
+# I mostly use this for debugging 
 @export var _debug_mode: bool
 @export var _debug_label: Label
 
