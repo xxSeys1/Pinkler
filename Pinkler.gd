@@ -1,9 +1,9 @@
 class_name Pinggla extends MarginContainer
 
 @export var _label: RichTextLabel
-# if it should outputed to the runtime output as well
 # this is usefull if you want to log the stuff the pinkler pisses
 @export var _stack_same: bool = true
+# if it should outputed to the runtime output as well
 @export var _pinkler_to_output: bool = true
 # pinkler will not recieve piss() calls when hidden
 @export var _hide_disables_pinkler: bool
